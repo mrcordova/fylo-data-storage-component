@@ -15,6 +15,9 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 meter::after {
@@ -36,8 +39,42 @@ meter {
   /* width: min-content; */
 }
 
+.amount-left-container {
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  left: 25%;
+  bottom: -25%;
+}
+.data-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--Dark-Blue);
+}
+.endpoints-container {
+  display: flex;
+}
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--Dark-Blue);
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icons > img {
+  background-color: var(--Very-Dark-Blue);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
 @media (min-width: 35rem) {
   body {
     background: url("../images/bg-desktop.png") no-repeat bottom / contain;
+    background-color: var(--Very-Dark-Blue);
   }
 }
