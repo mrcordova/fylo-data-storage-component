@@ -1,3 +1,22 @@
+:root {
+  --Gradent: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  background: url("../images/bg-mobile.png") no-repeat center / cover;
+}
+
+main {
+}
+
 meter::after {
   content: "";
   position: absolute;
@@ -15,4 +34,10 @@ meter::after {
 meter {
   position: relative;
   /* width: min-content; */
+}
+
+@media (min-width: 35rem) {
+  body {
+    background: url("../images/bg-desktop.png") no-repeat bottom / contain;
+  }
 }
