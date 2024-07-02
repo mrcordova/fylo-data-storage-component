@@ -13,7 +13,7 @@
   font-style: normal;
 }
 :root {
-  --Gradent: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+  --Gradent: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
 
   --Pale-Blue: hsl(243, 100%, 93%);
   --Grayish-Blue: hsl(229, 7%, 55%);
@@ -26,6 +26,7 @@ body {
   display: grid;
   place-content: center;
   background: url("../images/bg-mobile.png") no-repeat center / cover;
+  transition: background 2s;
 }
 
 main {
@@ -65,7 +66,7 @@ meter::-webkit-meter-optimum-value {
   max-height: 0.9rem;
   margin-inline-start: 0.14rem;
   border-radius: 1rem;
-  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  background: linear-gradient(to right, var(--Gradent));
 }
 
 .amount-left-container {
@@ -81,6 +82,8 @@ meter::-webkit-meter-optimum-value {
   padding-block: 0.4rem;
   padding-inline-start: 1.5rem;
   padding-inline-end: 1.3rem;
+
+  /* transition: 0.5s ease; */
 }
 
 .left {
