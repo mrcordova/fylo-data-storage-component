@@ -70,11 +70,10 @@ meter::-webkit-meter-optimum-value {
 .amount-left-container {
   position: absolute;
   background-color: hsl(0, 0%, 100%);
-  /* left: 23%; */
-  /* bottom: -23%; */
+
   left: 23%;
   bottom: 0;
-  /* transform: translateX(50%); */
+
   transform: translateY(50%);
   border-radius: 0.7rem;
   font-size: 2.5rem;
@@ -93,14 +92,20 @@ meter::-webkit-meter-optimum-value {
   flex-direction: column;
   position: relative;
   background-color: var(--Dark-Blue);
+  height: fit-content;
 
   border-radius: 0.5rem;
-  padding-inline-start: 2rem;
-  padding-inline-end: 1.85rem;
+  /* Mobile */
+  /* padding-inline-start: 2rem; */
+  /* padding-inline-end: 1.85rem; */
+  /* padding-block-start: 2rem; */
+  /* padding-block-end: 2.8rem; */
+  inline-size: 34rem;
+  /* Desktop */
+  padding-inline-start: 2.5rem;
+  padding-inline-end: 2.5rem;
   padding-block-start: 2rem;
-  padding-block-end: 2.8rem;
-
-  /* gap: 1.3rem; */
+  padding-block-end: 2.1rem;
 }
 
 .data-title {
@@ -150,5 +155,27 @@ meter::-webkit-meter-optimum-value {
 
   main {
     flex-direction: row;
+  }
+
+  .data-title {
+    text-align: left;
+  }
+
+  .amount-left-container {
+    left: 59%;
+    bottom: 0;
+    transform: translateY(-171%);
+  }
+  .amount-left-container::before {
+    content: "";
+    position: absolute;
+    border-width: 1rem;
+    border-color: transparent hsl(0, 0%, 100%) transparent transparent;
+    border-style: solid;
+    height: 0;
+    width: 0;
+    bottom: -22%;
+    left: 82%;
+    /* transform: translateX(100%); */
   }
 }
